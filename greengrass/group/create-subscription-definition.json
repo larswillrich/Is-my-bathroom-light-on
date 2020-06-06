@@ -1,0 +1,19 @@
+{
+	"Name": "greengrassCoreSubscription",
+	"InitialVersion":{
+		"Subscriptions": [
+			{
+				"Id": "fromGGC",
+				"Source": "arn:aws:lambda:eu-west-1:199982716068:function:lambdaInGreengrassCore:3",
+				"Subject": "hello/world", 
+				"Target": "cloud"
+			},
+			{
+				"Id": "fromThing1ToThing2", 
+				"Source": "arn:aws:iot:eu-west-1:199982716068:thing/thing1", 
+				"Subject": "hello/world/pubsub", 
+				"Target": "arn:aws:iot:eu-west-1:199982716068:thing/thing2"
+			}
+		]
+	}
+}

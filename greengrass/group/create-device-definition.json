@@ -1,0 +1,19 @@
+{
+    "Name": "things",
+    "InitialVersion": {
+        "Devices": [
+            {
+                "CertificateArn": "arn:aws:iot:eu-west-1:199982716068:cert/929ba99eacdf1f43186a45bb92c19878dbcafa29d8ce5298c3e3a80f18fbd318",
+                "Id": "thing1",
+                "SyncShadow": true,
+                "ThingArn": "arn:aws:iot:eu-west-1:199982716068:thing/thing1"
+            },
+            {
+                "CertificateArn": "arn:aws:iot:eu-west-1:199982716068:cert/a2362657da153e3480599fb4c5a362a8026a07c1bb92303afd3947bdb565fd8c",
+                "Id": "thing2",
+                "SyncShadow": true,
+                "ThingArn": "arn:aws:iot:eu-west-1:199982716068:thing/thing2"
+            }
+        ]
+    }
+}

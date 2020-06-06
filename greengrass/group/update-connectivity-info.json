@@ -1,0 +1,9 @@
+{
+    "ThingName": "greenGrassGroup",
+    "ConnectivityInfo":[{
+        "Metadata":"",
+        "PortNumber":8883,
+        "HostAddress":"127.0.0.1",
+        "Id":"localhost_127.0.0.1_0"
+    }]
+}

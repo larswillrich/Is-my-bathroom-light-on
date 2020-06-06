@@ -1,0 +1,25 @@
+{
+	"Name": "lambdaInGreengrassCore",
+	"InitialVersion": {
+		"DefaultConfig": {
+			"Execution": {
+			"IsolationMode": "NoContainer"
+			}
+		},
+		"Functions": [
+			{
+				"Id": "lambdaInGreengrassCore",
+				"FunctionArn": "arn:aws:lambda:eu-west-1:199982716068:function:lambdaInGreengrassCore:3",
+				"FunctionConfiguration": {
+					"Environment": {
+						"Execution": {
+							"IsolationMode": "NoContainer"
+							}
+						},
+					"Executable": "greengrassHelloWorldCounter.function_handler",
+					"Pinned": false,
+					"Timeout": 25}
+			}
+		]
+	}
+}

@@ -1,0 +1,29 @@
+[
+      {
+        "name": "jumpssh",
+        "image": "larswillrich/jumpssh",
+        "essential": true,
+        "interactive": true,
+        "mountPoints": [
+          {
+            "readOnly": false,
+            "containerPath": "/mounting",
+            "sourceVolume": "greengrass"
+           }
+        ],
+        "portMappings": [
+          {
+            "containerPort": 22,
+            "hostPort": 22
+          }
+        ],
+        "logConfiguration": { 
+          "logDriver": "awslogs",
+          "options": { 
+            "awslogs-group" : "/ecs/fargate-task-definition",
+            "awslogs-region": "eu-west-1",
+            "awslogs-stream-prefix": "ecs"
+          }
+        }
+      }
+]

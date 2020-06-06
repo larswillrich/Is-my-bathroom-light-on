@@ -1,0 +1,46 @@
+[
+    {
+      "name": "greengrassCore",
+      "image": "amazon/aws-iot-greengrass",
+      "entryPoint": [
+        "/greengrass-entrypoint.sh"
+      ],
+      "essential": true,
+      "interactive": true,
+      "mountPoints": [
+        {
+          "readOnly": false,
+          "containerPath": "/greengrass/ggc/var/log",
+          "sourceVolume": "logs"
+         },
+         {
+          "readOnly": false,
+          "containerPath": "/greengrass/certs",
+          "sourceVolume": "certs"
+         },
+         {
+          "readOnly": false,
+          "containerPath": "/greengrass/config",
+          "sourceVolume": "config"
+         }
+      ],
+      "portMappings": [
+        {
+          "containerPort": 8883,
+          "hostPort": 8883
+        },
+        {
+          "containerPort": 2049,
+          "hostPort": 2049
+        }
+      ],
+      "logConfiguration": { 
+        "logDriver": "awslogs",
+        "options": { 
+           "awslogs-group" : "/ecs/fargate-task-definition",
+           "awslogs-region": "eu-west-1",
+           "awslogs-stream-prefix": "ecs"
+        }
+     }
+    }
+  ]

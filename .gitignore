@@ -31,3 +31,8 @@ override.tf.json
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
+
+# application specific
+**/groupCA/*
+**/run/thing.cert.pem
+**/run/thing.private.key
