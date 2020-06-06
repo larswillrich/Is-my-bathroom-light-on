@@ -32,6 +32,8 @@ There are two important folders.
 
 # How to run the code?
 
+**Be aware of shutting down your ressources again. This can end up in high prices, because an `public AWS endpoint` is used for `MQTT communication`. Also `jump server` and `IoT Greengrass Core` are running on a fargate based cluster as long as you don't turn them off again!**  
+  
 Following steps should provide you an understanding how to set up the infrastructure:
 1. `terraform apply` to all resources in `cluster` folder
 2. `terraform apply` in all resources in `greengrass` folder. This are core, thing1, thing2 and the policy directly in the greengrass folder.
@@ -45,8 +47,7 @@ Following steps should provide you an understanding how to set up the infrastruc
 10. Check the log files by using the `jump Server` if there are no error messages. `/greengrass/gcc/var/log/system/runtime.log`
 11. Start `thing1` and `thing2` by running the scripts `run.sh` in each of these folders. For this you need to install some AWS Python libs.
 12. You should see messages sent from `thing1` to `thing2` and also messages sent to IoT from `IoT Greengrass Core`.
-12. Enjoy! Some steps needs to be more in an automatic way, but the time will come!
-
+12. Enjoy! Some steps needs to be more in an automatic way, but the time will come!  
 
 # Next steps
 
